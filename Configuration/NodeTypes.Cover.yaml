@@ -1,0 +1,128 @@
+'DIU.Neos.Content.Carousel:Cover':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: i18n
+    group: 'general'
+    icon: icon-image
+    reloadIfChanged: true
+    inlineEditable: true
+    inspector:
+      groups:
+        'general':
+          icon: 'icon-image'
+          label: i18n
+        'left':
+          icon: 'icon-left'
+          label: i18n
+        'right':
+          icon: 'icon-right'
+          label: i18n
+  childNodes:
+    leftSide:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Neos.Neos:Content': true
+    RightSide:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Neos.Neos:Content': true
+  properties:
+    backgroundColor:
+      type: string
+      defaultValue: 'transparent'
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'general'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'transparent':
+                label: i18n
+    backgroundColorLeft:
+      type: string
+      defaultValue: 'transparent'
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'left'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'transparent':
+                label: i18n
+    backgroundColorRight:
+      type: string
+      defaultValue: transparent
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'right'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'transparent':
+                label: i18n
+    backgroundImage:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: 'general'
+          position: 10
+          editorOptions:
+            features:
+              crop: true
+            crop:
+              aspectRatio:
+                forceCrop: true
+                locked:
+                  width: 16
+                  height: 9
+                enableOriginal: false
+                allowCustom: false
+    backgroundImageLeft:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: 'left'
+          position: 10
+          editorOptions:
+            features:
+              crop: true
+            crop:
+              aspectRatio:
+                forceCrop: true
+                locked:
+                  width: 4
+                  height: 3
+                enableOriginal: false
+                allowCustom: false
+    backgroundImageRight:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: 'right'
+          position: 10
+          editorOptions:
+            features:
+              crop: true
+            crop:
+              aspectRatio:
+                forceCrop: true
+                locked:
+                  width: 4
+                  height: 3
+                enableOriginal: false
+                allowCustom: false

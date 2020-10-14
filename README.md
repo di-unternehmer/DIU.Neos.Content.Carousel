@@ -74,13 +74,14 @@ prototype(DIU.Neos.Content.Carousel:Wrapper) {
 ```
 prototype(DIU.Neos.Content.Carousel:Script) {
     initialize {
-        templatePath = 'resource://My.Package/Private/Fusion/Slider/Slider.js'
+        templatePath = 'resource://My.Package/Private/Fusion/Carousel/Carousel.js'
     }
 }
 ```
 ... containing:
 ```
 var swiper = new Swiper('.swiper-container', {
+  autoHeight: true, //enable auto height
   pagination: {
     el: '.swiper-pagination',
   },

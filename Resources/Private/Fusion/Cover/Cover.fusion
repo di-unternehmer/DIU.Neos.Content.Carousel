@@ -1,0 +1,32 @@
+prototype(DIU.Neos.Content.Carousel:Cover) < prototype(Neos.Neos:ContentComponent) {
+    renderer = DIU.Neos.Content.Carousel:Cover.Presentation {
+        backgroundImageUrl = Neos.Neos:ImageUri {
+            asset = ${q(node).property('backgroundImage')}
+            @if.set = ${q(node).property('backgroundImage')}
+            maximumWidth = 900
+            allowCropping = true
+        }
+        backgroundImageUrlLeft = Neos.Neos:ImageUri {
+            asset = ${q(node).property('backgroundImageLeft')}
+            @if.set = ${q(node).property('backgroundImageLeft')}
+            maximumWidth = 900
+            allowCropping = true
+        }
+        backgroundImageUrlRight = Neos.Neos:ImageUri {
+            asset = ${q(node).property('backgroundImageRight')}
+            @if.set = ${q(node).property('backgroundImageRight')}
+            maximumWidth = 900
+            allowCropping = true
+        }
+        backgroundColor = ${q(node).property('backgroundColor')}
+        backgroundColorLeft = ${q(node).property('backgroundColorLeft')}
+        backgroundColorRight = ${q(node).property('backgroundColorRight')}
+
+        leftSide = Neos.Neos:PrimaryContent {
+            nodePath = 'leftSide'
+        }
+        rightSide = Neos.Neos:PrimaryContent {
+            nodePath = 'rightSide'
+        }
+    }
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="DIU.Neos.Content.Carousel" source-language="de" target-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label">
+              <source>Hintergrund</source>
+              <target>Background</target>
+            </trans-unit>
+            <trans-unit id="properties.backgroundColor">
+              <source>Hintergrund Farbe</source>
+              <target>Background Color</target>
+            </trans-unit>
+            <trans-unit id="properties.backgroundColorLeft">
+              <source>Farbe Links</source>
+              <target>Color Left</target>
+            </trans-unit>
+            <trans-unit id="properties.backgroundColorRight">
+              <source>Farbe Rechts</source>
+              <target>Color Right</target>
+            </trans-unit>
+            <trans-unit id="properties.backgroundImage">
+              <source>Hintergrund Bild</source>
+              <target>Background Image</target>
+            </trans-unit>
+            <trans-unit id="properties.backgroundImageLeft"">
+              <source>Bild Links</source>
+              <target>Image Left</target>
+            </trans-unit>
+            <trans-unit id="properties.backgroundImageRight">
+              <source>Bild Rechts</source>
+              <target>Image Right</target>
+            </trans-unit>
+            <trans-unit id="properties.backgroundColor.selectBoxEditor.values.transparent">
+              <source>Transparent</source>
+              <target>Transparent</target>
+            </trans-unit>
+            <trans-unit id="properties.backgroundColorLeft.selectBoxEditor.values.transparent">
+              <source>Transparent</source>
+              <target>Transparent</target>
+            </trans-unit>
+            <trans-unit id="properties.backgroundColorRight.selectBoxEditor.values.transparent">
+              <source>Transparent</source>
+              <target>Transparent</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

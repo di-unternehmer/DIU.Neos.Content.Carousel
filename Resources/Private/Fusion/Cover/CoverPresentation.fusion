@@ -1,0 +1,63 @@
+prototype(DIU.Neos.Content.Carousel:Cover.Presentation) < prototype(Neos.Fusion:Component) {
+
+    backgroundImageUrl = null
+    backgroundImageUrlLeft = null
+    backgroundImageUrlRight = null
+    backgroundColor = null
+    backgroundColorLeft = null
+    backgroundColorRight = null
+    leftSide = null
+    rightSide = null
+
+    renderer = Neos.Fusion:Component {
+
+        styleWrapper = Neos.Fusion:Join {
+            backgroundImage = Neos.Fusion:Value {
+                value = ${'background-image:url(' + props.backgroundImageUrl + ');'}
+                @if.set = ${props.backgroundImageUrl}
+            }
+            backgroundColor = Neos.Fusion:Value {
+                value = ${'background-color:' + props.backgroundColor + ';'}
+                @if.set = ${props.backgroundColor}
+            }
+        }
+
+        styleLeft = Neos.Fusion:Join {
+            backgroundImageUrlLeft = Neos.Fusion:Value {
+                value = ${'background-image:url(' + props.backgroundImageUrlLeft + ');'}
+                @if.set = ${props.backgroundImageUrlLeft}
+            }
+            backgroundColorLeft = Neos.Fusion:Value {
+                value = ${'background-color:' + props.backgroundColorLeft + ';'}
+                @if.set = ${props.backgroundColorLeft}
+            }
+        }
+
+        styleRight = Neos.Fusion:Join {
+            backgroundImageUrlRight = Neos.Fusion:Value {
+                value = ${'background-image:url(' + props.backgroundImageUrlRight + ');'}
+                @if.set = ${props.backgroundImageUrlRight}
+            }
+            backgroundColorRight = Neos.Fusion:Value {
+                value = ${'background-color:' + props.backgroundColorRight + ';'}
+                @if.set = ${props.backgroundColorRight}
+            }
+        }
+
+        leftSide = ${props.leftSide}
+        rightSide = ${props.rightSide}
+
+        renderer = afx`
+            <div class="cover-container__wrapper" style={props.styleWrapper}>
+                <div class="cover-container__left-side" style={props.styleLeft}>
+                    {props.leftSide}
+                </div>
+                <div class="cover-container__right-side" style={props.styleRight}>
+                    {props.rightSide}
+                </div>
+            </div>
+        `
+    }
+
+
+}
