@@ -1,0 +1,15 @@
+prototype(DIU.Neos.Content.Carousel:Styles) < prototype(Neos.Fusion:Array) {
+    mainStyles = Neos.Fusion:Tag {
+        tagName = 'link'
+        attributes {
+            rel = 'stylesheet'
+            href = Neos.Fusion:ResourceUri {
+                path = 'resource://DIU.Neos.Content.Carousel/Public/Styles/swiper-bundle.min.css'
+            }
+        }
+    }
+    customStyles = Neos.Fusion:Template {
+        templatePath = 'resource://DIU.Neos.Content.Carousel/Private/Fusion/Styles/Styles.css'
+        @process.wrap = ${'<style>' + value + '</style>'}
+    }
+}

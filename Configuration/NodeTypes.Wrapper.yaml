@@ -1,0 +1,11 @@
+'DIU.Neos.Content.Carousel:Wrapper':
+  superTypes:
+    'Neos.Neos:Content': true
+    'DIU.Neos.Content.Carousel:Slide': true
+  ui:
+    label: i18n
+    group: 'general'
+    icon: icon-slideshare
+    position: 420
+    reloadIfChanged: true
+    inlineEditable: true

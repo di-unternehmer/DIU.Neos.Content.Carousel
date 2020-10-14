@@ -1,0 +1,14 @@
+{
+    "description": "Make your carousel",
+    "type": "neos-plugin",
+    "name": "diu/content-carousel",
+    "require": {
+        "neos/flow": "*",
+        "neos/neos": "*"
+    },
+    "extra": {
+        "neos": {
+            "package-key": "DIU.Neos.Content.Carousel"
+        }
+    }
+}

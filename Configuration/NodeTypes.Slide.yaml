@@ -1,0 +1,5 @@
+'DIU.Neos.Content.Carousel:Slide':
+  abstract: true
+  constraints:
+    nodeTypes:
+      'Neos.Neos:Content': true

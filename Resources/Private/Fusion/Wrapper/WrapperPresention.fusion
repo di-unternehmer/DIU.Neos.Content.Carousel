@@ -1,0 +1,48 @@
+prototype(DIU.Neos.Content.Carousel:Wrapper.Presentation) < prototype(Neos.Fusion:Component) {
+
+    slides = null
+    navigation = null
+
+    renderer = Neos.Fusion:Component {
+        sliderElements = Neos.Fusion:Collection {
+            collection = ${props.slides}
+            itemName = 'node'
+            itemRenderer = Neos.Fusion:Tag {
+                tagName = 'div'
+                attributes.class = 'swiper-slide'
+                content = Neos.Neos:ContentCase
+            }
+        }
+
+        sliderNavigation = Neos.Fusion:Case {
+            sliderNavigation {
+                condition = ${!props.navigation}
+                renderer = Neos.Fusion:Join {
+                    swiperButtonNext = Neos.Fusion:Tag {
+                        tagName = 'div'
+                        attributes.class = 'swiper-button-next'
+                    }
+                    swiperButtonPrev = Neos.Fusion:Tag {
+                        tagName = 'div'
+                        attributes.class = 'swiper-button-prev'
+                    }
+                }
+            }
+            default {
+                condition = true
+                renderer = ${props.navigation}
+            }
+        }
+
+        renderer = afx`
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {props.sliderElements}
+                </div>
+                {props.sliderNavigation}
+            </div>
+        `
+    }
+
+
+}
