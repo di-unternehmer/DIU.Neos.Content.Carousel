@@ -1,5 +1,5 @@
 prototype(DIU.Neos.Content.Carousel:Script) < prototype(Neos.Fusion:Array) {
-    timelineJsLibrary = Neos.Fusion:Tag {
+    mainJsLibrary = Neos.Fusion:Tag {
         tagName = 'script'
         attributes {
             src = Neos.Fusion:ResourceUri {
