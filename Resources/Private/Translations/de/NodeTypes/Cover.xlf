@@ -18,10 +18,10 @@
               <source>Hintergrund Farbe</source>
             </trans-unit>
             <trans-unit id="properties.backgroundColorLeft">
-              <source>Farbe Links</source>
+              <source>Hintergrund Farbe Links</source>
             </trans-unit>
             <trans-unit id="properties.backgroundColorRight">
-              <source>Farbe Rechts</source>
+              <source>Hintergrund Farbe Rechts</source>
             </trans-unit>
             <trans-unit id="properties.backgroundImage">
               <source>Hintergrund Bild</source>

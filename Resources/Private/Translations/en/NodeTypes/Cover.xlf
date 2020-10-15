@@ -23,11 +23,11 @@
               <target>Background Color</target>
             </trans-unit>
             <trans-unit id="properties.backgroundColorLeft">
-              <source>Farbe Links</source>
+              <source>Hintergrund Farbe Links</source>
               <target>Color Left</target>
             </trans-unit>
             <trans-unit id="properties.backgroundColorRight">
-              <source>Farbe Rechts</source>
+              <source>Hintergrund Farbe Rechts</source>
               <target>Color Right</target>
             </trans-unit>
             <trans-unit id="properties.backgroundImage">
