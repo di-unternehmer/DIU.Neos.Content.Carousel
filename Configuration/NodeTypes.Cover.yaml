@@ -10,13 +10,13 @@
     inspector:
       groups:
         'general':
-          icon: 'icon-image'
+          icon: 'icon-arrows-alt-h'
           label: i18n
         'left':
-          icon: 'icon-left'
+          icon: 'icon-long-arrow-alt-left'
           label: i18n
         'right':
-          icon: 'icon-right'
+          icon: 'icon-long-arrow-alt-right'
           label: i18n
   childNodes:
     leftSide:

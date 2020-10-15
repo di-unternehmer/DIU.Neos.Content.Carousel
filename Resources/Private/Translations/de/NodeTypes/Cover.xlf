@@ -5,6 +5,15 @@
             <trans-unit id="ui.label">
               <source>Hintergrund</source>
             </trans-unit>
+            <trans-unit id="groups.general">
+              <source>Beide Seiten</source>
+            </trans-unit>
+            <trans-unit id="groups.left">
+              <source>Linke Seite</source>
+            </trans-unit>
+            <trans-unit id="groups.right">
+              <source>Rechte Seite</source>
+            </trans-unit>
             <trans-unit id="properties.backgroundColor">
               <source>Hintergrund Farbe</source>
             </trans-unit>

@@ -6,6 +6,18 @@
               <source>Hintergrund</source>
               <target>Background</target>
             </trans-unit>
+            <trans-unit id="groups.general">
+              <source>Beide Seiten</source>
+              <target>Both Sides</target>
+            </trans-unit>
+            <trans-unit id="groups.left">
+              <source>Linke Seite</source>
+              <target>Left Side</target>
+            </trans-unit>
+            <trans-unit id="groups.right">
+              <source>Rechte Seite</source>
+              <target>Right Side</target>
+            </trans-unit>
             <trans-unit id="properties.backgroundColor">
               <source>Hintergrund Farbe</source>
               <target>Background Color</target>
