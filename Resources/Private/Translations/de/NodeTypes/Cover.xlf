@@ -3,7 +3,7 @@
     <file original="" product-name="DIU.Neos.Content.Carousel" source-language="de" datatype="plaintext">
         <body>
             <trans-unit id="ui.label">
-              <source>Hintergrund</source>
+              <source>Hintergrund Spalten</source>
             </trans-unit>
             <trans-unit id="groups.general">
               <source>Beide Seiten</source>
@@ -32,14 +32,14 @@
             <trans-unit id="properties.backgroundImageRight">
               <source>Bild Rechts</source>
             </trans-unit>
-            <trans-unit id="properties.backgroundColor.selectBoxEditor.values.transparent">
-              <source>Transparent</source>
+            <trans-unit id="properties.backgroundColor.selectBoxEditor.values.default">
+              <source>Default</source>
             </trans-unit>
-            <trans-unit id="properties.backgroundColorLeft.selectBoxEditor.values.transparent">
-              <source>Transparent</source>
+            <trans-unit id="properties.backgroundColorLeft.selectBoxEditor.values.default">
+              <source>Default</source>
             </trans-unit>
-            <trans-unit id="properties.backgroundColorRight.selectBoxEditor.values.transparent">
-              <source>Transparent</source>
+            <trans-unit id="properties.backgroundColorRight.selectBoxEditor.values.default">
+              <source>Default</source>
             </trans-unit>
         </body>
     </file>

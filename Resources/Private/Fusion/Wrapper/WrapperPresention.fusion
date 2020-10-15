@@ -34,8 +34,19 @@ prototype(DIU.Neos.Content.Carousel:Wrapper.Presentation) < prototype(Neos.Fusio
             }
         }
 
+        swiperClass = Neos.Fusion:Case {
+            inBackend {
+                condition = ${node.context.inBackend}
+                renderer = 'swiper-backend-container'
+            }
+            inFrontend {
+                condition = ${true}
+                renderer = 'swiper-container'
+            }
+        }
+
         renderer = afx`
-            <div class="swiper-container">
+            <div class={props.swiperClass}>
                 <div class="swiper-wrapper">
                     {props.sliderElements}
                 </div>

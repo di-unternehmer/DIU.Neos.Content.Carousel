@@ -16,6 +16,11 @@
     overflow: hidden;
 }
 
+.cover-container__wrapper.background-class--white,
+.cover-container__wrapper .background-class--white {
+    background-color: #fff;
+}
+
 .cover-container__wrapper .cover-container__left-side {
     text-align: left;
 }

@@ -3,3 +3,6 @@
   constraints:
     nodeTypes:
       'Neos.Neos:Content': true
+  ui:
+    reloadIfChanged: true
+    inlineEditable: true

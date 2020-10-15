@@ -3,14 +3,11 @@ prototype(DIU.Neos.Content.Carousel:Cover.Presentation) < prototype(Neos.Fusion:
     backgroundImageUrl = null
     backgroundImageUrlLeft = null
     backgroundImageUrlRight = null
-    backgroundColor = null
-    backgroundColorLeft = null
-    backgroundColorRight = null
+    backgroundClass = null
+    backgroundClassLeft = null
+    backgroundClassRight = null
     leftSide = null
     rightSide = null
-    class = Neos.Fusion:DataStructure {
-        wrapper = 'cover-container__wrapper'
-    }
 
     renderer = Neos.Fusion:Component {
 
@@ -19,20 +16,12 @@ prototype(DIU.Neos.Content.Carousel:Cover.Presentation) < prototype(Neos.Fusion:
                 value = ${'background-image:url(' + props.backgroundImageUrl + ');'}
                 @if.set = ${props.backgroundImageUrl}
             }
-            backgroundColor = Neos.Fusion:Value {
-                value = ${'background-color:' + props.backgroundColor + ';'}
-                @if.set = ${props.backgroundColor}
-            }
         }
 
         styleLeft = Neos.Fusion:Join {
             backgroundImageUrlLeft = Neos.Fusion:Value {
                 value = ${'background-image:url(' + props.backgroundImageUrlLeft + ');'}
                 @if.set = ${props.backgroundImageUrlLeft}
-            }
-            backgroundColorLeft = Neos.Fusion:Value {
-                value = ${'background-color:' + props.backgroundColorLeft + ';'}
-                @if.set = ${props.backgroundColorLeft}
             }
         }
 
@@ -41,22 +30,41 @@ prototype(DIU.Neos.Content.Carousel:Cover.Presentation) < prototype(Neos.Fusion:
                 value = ${'background-image:url(' + props.backgroundImageUrlRight + ');'}
                 @if.set = ${props.backgroundImageUrlRight}
             }
-            backgroundColorRight = Neos.Fusion:Value {
-                value = ${'background-color:' + props.backgroundColorRight + ';'}
-                @if.set = ${props.backgroundColorRight}
+        }
+
+        class = Neos.Fusion:DataStructure {
+            wrapper = 'cover-container__wrapper'
+            backgroundClass = Neos.Fusion:Value {
+                value = ${'background-class--' + props.backgroundClass}
+                @if.set = ${props.backgroundClass}
+            }
+        }
+
+        leftClass = Neos.Fusion:DataStructure {
+            leftClass = 'cover-container__left-side'
+            backgroundClassLeft = Neos.Fusion:Value {
+                value = ${'background-class--' + props.backgroundClassLeft}
+                @if.set = ${props.backgroundClassLeft}
+            }
+        }
+
+        rightClass = Neos.Fusion:DataStructure {
+            rightClass = 'cover-container__right-side'
+            backgroundClassRight = Neos.Fusion:Value {
+                value = ${'background-class--' + props.backgroundClassRight}
+                @if.set = ${props.backgroundClassRight}
             }
         }
 
         leftSide = ${props.leftSide}
         rightSide = ${props.rightSide}
-        class = ${props.class}
 
         renderer = afx`
             <div class={props.class} style={props.styleWrapper}>
-                <div class="cover-container__left-side" style={props.styleLeft}>
+                <div class={props.leftClass} style={props.styleLeft}>
                     {props.leftSide}
                 </div>
-                <div class="cover-container__right-side" style={props.styleRight}>
+                <div class={props.rightClass} style={props.styleRight}>
                     {props.rightSide}
                 </div>
             </div>

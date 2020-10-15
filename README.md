@@ -94,7 +94,6 @@ var swiper = new Swiper('.swiper-container', {
 To add background colors just extend the properties in you site package.
 
 ```
-
 'DIU.Neos.Content.Carousel:Cover':
   properties:
     backgroundColor:
@@ -102,56 +101,105 @@ To add background colors just extend the properties in you site package.
         inspector:
           editorOptions:
             values:
-              '#fff':
+              'white':
                 label: 'White'
     backgroundColorLeft:
       ui:
         inspector:
           editorOptions:
             values:
-              '#fff':
+              'white':
                 label: 'White'
     backgroundColorRight:
       ui:
         inspector:
           editorOptions:
             values:
-              '#fff':
+              'white':
                 label: 'White'
 
 ```
 
-If you want to use properties like text color, first add these properties to your site package.
+##If you want to use text color, first add these properties to your site package.
 
 ```
 'DIU.Neos.Content.Carousel:Cover':
   properties:
     textColor:
       type: string
-      defaultValue: 'text-color__default'
+      defaultValue: 'text-color--default'
       ui:
-        label: i18n
+        label: 'Text Color'
         reloadIfChanged: TRUE
         inspector:
           group: 'general'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
-              'text-color__default':
+              'text-color--default':
                 label: Default
-              'text-color__white':
-                label: Weiss
-              'text-color__black':
-                label: Schwarz
-
+              'text-color--white':
+                label: White
+              'text-color--black':
+                label: Black
+    textColorLeft:
+        ...
+    textColorRight:
+        ...
 ```
 
 And connect them to the classlist with fusion in your site package.
 
 ```
 prototype(DIU.Neos.Content.Carousel:Cover.Presentation) {
-    class {
-        textColor = ${q(node).property('textColor')}
+    renderer {
+        class {
+            textColor = ${q(node).property('textColor')}
+        }
+        lefttClass {
+            textColorLeft = ${q(node).property('textColorLeft')}
+        }
+        rightClass {
+            textColorRight = ${q(node).property('textColorRight')}
+        }
     }
 }
 ```
+Don't forget to add custom css to your site package for these new classes which will be added now to the container.
+
+```
+.cover-container__wrapper {
+  &.text-color--white,
+  .text-color--white {
+      p, a, li, h1, h2, h3, h4, h5, h6 {
+          color: white;
+      }
+  }
+  &.text-color--black,
+  .text-color--black {
+      p, a, li, h1, h2, h3, h4, h5, h6 {
+          color: black;
+      }
+  }
+  &.background-class--red,
+  .background-class--red {
+      background-color: red;
+  }
+}
+```
+
+
+##Prevent overwriting by dependency
+
+To prevent overwriting the changes you made in your site package you have to require the carousel package in your site package composer.json. 
+
+```
+{
+    "description": "Another Neos Site",
+    "type": "neos-site",
+    "require": {
+        "neos/neos": "*",
+        "diu/content-carousel": "*"
+    },
+    ...
+}

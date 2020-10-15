@@ -2,7 +2,6 @@
   superTypes:
     'Neos.Neos:Content': true
     'DIU.Neos.Content.Carousel:Slide': true
-    'DIU.Neos.Content.Carousel:Cover': true
   ui:
     label: i18n
     group: 'general'

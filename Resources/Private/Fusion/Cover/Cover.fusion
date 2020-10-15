@@ -18,9 +18,9 @@ prototype(DIU.Neos.Content.Carousel:Cover) < prototype(Neos.Neos:ContentComponen
             maximumWidth = 900
             allowCropping = true
         }
-        backgroundColor = ${q(node).property('backgroundColor')}
-        backgroundColorLeft = ${q(node).property('backgroundColorLeft')}
-        backgroundColorRight = ${q(node).property('backgroundColorRight')}
+        backgroundClass = ${q(node).property('backgroundColor')}
+        backgroundClassLeft = ${q(node).property('backgroundColorLeft')}
+        backgroundClassRight = ${q(node).property('backgroundColorRight')}
 
         leftSide = Neos.Neos:PrimaryContent {
             nodePath = 'leftSide'

@@ -6,9 +6,11 @@ prototype(DIU.Neos.Content.Carousel:Script) < prototype(Neos.Fusion:Array) {
                 path = 'resource://DIU.Neos.Content.Carousel/Public/JavaScript/swiper-bundle.min.js'
             }
         }
+        @if.inFrontend = ${!node.context.inBackend}
     }
     initialize = Neos.Fusion:Template {
         templatePath = 'resource://DIU.Neos.Content.Carousel/Private/Fusion/Script/Script.js'
         @process.wrap = ${'<script>' + value + '</script>'}
+        @if.inFrontend = ${!node.context.inBackend}
     }
 }

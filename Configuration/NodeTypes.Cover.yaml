@@ -32,7 +32,7 @@
   properties:
     backgroundColor:
       type: string
-      defaultValue: 'transparent'
+      defaultValue: 'default'
       ui:
         label: i18n
         reloadIfChanged: TRUE
@@ -41,11 +41,11 @@
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
-              'transparent':
+              'default':
                 label: i18n
     backgroundColorLeft:
       type: string
-      defaultValue: 'transparent'
+      defaultValue: 'default'
       ui:
         label: i18n
         reloadIfChanged: TRUE
@@ -54,11 +54,11 @@
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
-              'transparent':
+              'default':
                 label: i18n
     backgroundColorRight:
       type: string
-      defaultValue: transparent
+      defaultValue: default
       ui:
         label: i18n
         reloadIfChanged: TRUE
@@ -67,7 +67,7 @@
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
-              'transparent':
+              'default':
                 label: i18n
     backgroundImage:
       type: Neos\Media\Domain\Model\ImageInterface
