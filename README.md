@@ -89,3 +89,69 @@ var swiper = new Swiper('.swiper-container', {
 ```
 
 
+## Extend the Carousel with properties
+
+To add background colors just extend the properties in you site package.
+
+```
+
+'DIU.Neos.Content.Carousel:Cover':
+  properties:
+    backgroundColor:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '#fff':
+                label: 'White'
+    backgroundColorLeft:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '#fff':
+                label: 'White'
+    backgroundColorRight:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '#fff':
+                label: 'White'
+
+```
+
+If you want to use properties like text color, first add these properties to your site package.
+
+```
+'DIU.Neos.Content.Carousel:Cover':
+  properties:
+    textColor:
+      type: string
+      defaultValue: 'text-color__default'
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'left'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'text-color__default':
+                label: Default
+              'text-color__white':
+                label: Weiss
+              'text-color__black':
+                label: Schwarz
+
+```
+
+And connect them to the classlist with fusion in your site package.
+
+```
+prototype(DIU.Neos.Content.Carousel:Cover.Presentation) {
+    class {
+        textColor = ${q(node).property('textColor')}
+    }
+}
+```

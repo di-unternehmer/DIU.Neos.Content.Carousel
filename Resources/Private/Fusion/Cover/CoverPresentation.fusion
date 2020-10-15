@@ -8,6 +8,9 @@ prototype(DIU.Neos.Content.Carousel:Cover.Presentation) < prototype(Neos.Fusion:
     backgroundColorRight = null
     leftSide = null
     rightSide = null
+    class = Neos.Fusion:DataStructure {
+        wrapper = 'cover-container__wrapper'
+    }
 
     renderer = Neos.Fusion:Component {
 
@@ -46,9 +49,10 @@ prototype(DIU.Neos.Content.Carousel:Cover.Presentation) < prototype(Neos.Fusion:
 
         leftSide = ${props.leftSide}
         rightSide = ${props.rightSide}
+        class = ${props.class}
 
         renderer = afx`
-            <div class="cover-container__wrapper" style={props.styleWrapper}>
+            <div class={props.class} style={props.styleWrapper}>
                 <div class="cover-container__left-side" style={props.styleLeft}>
                     {props.leftSide}
                 </div>
