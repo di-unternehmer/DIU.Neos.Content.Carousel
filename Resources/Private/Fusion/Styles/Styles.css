@@ -11,8 +11,6 @@
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
     overflow: hidden;
 }
 
@@ -21,22 +19,12 @@
     background-color: #fff;
 }
 
-.cover-container__wrapper .cover-container__left-side {
-    text-align: left;
-}
-
-.cover-container__wrapper .cover-container__right-side {
-    text-align: right;
-}
-
 .cover-container__wrapper .cover-container__left-side,
 .cover-container__wrapper .cover-container__right-side {
     width: 100%;
-    padding: 30px;
     display: block;
     background-size: cover;
     background-position: center center;
-    min-height: 300px;
 }
 
 @media screen and (min-width: 600px) {

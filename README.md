@@ -120,7 +120,7 @@ To add background colors just extend the properties in you site package.
 
 ```
 
-##If you want to use text color, first add these properties to your site package.
+## If you want to use text color, first add these properties to your site package.
 
 ```
 'DIU.Neos.Content.Carousel:Cover':
@@ -189,7 +189,7 @@ Don't forget to add custom css to your site package for these new classes which 
 ```
 
 
-##Prevent overwriting by dependency
+## Prevent overwriting by dependency
 
 To prevent overwriting the changes you made in your site package you have to require the carousel package in your site package composer.json. 
 
