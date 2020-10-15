@@ -3,7 +3,7 @@ prototype(DIU.Neos.Content.Carousel:Cover) < prototype(Neos.Neos:ContentComponen
         backgroundImageUrl = Neos.Neos:ImageUri {
             asset = ${q(node).property('backgroundImage')}
             @if.set = ${q(node).property('backgroundImage')}
-            maximumWidth = 900
+            maximumWidth = 1280
             allowCropping = true
         }
         backgroundImageUrlLeft = Neos.Neos:ImageUri {
