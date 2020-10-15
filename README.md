@@ -133,7 +133,7 @@ If you want to use properties like text color, first add these properties to you
         label: i18n
         reloadIfChanged: TRUE
         inspector:
-          group: 'left'
+          group: 'general'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
