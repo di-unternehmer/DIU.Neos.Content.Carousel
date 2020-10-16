@@ -24,7 +24,7 @@
       constraints:
         nodeTypes:
           'Neos.Neos:Content': true
-    RightSide:
+    rightSide:
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
