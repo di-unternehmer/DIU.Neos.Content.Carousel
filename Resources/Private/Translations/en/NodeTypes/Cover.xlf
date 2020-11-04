@@ -34,7 +34,7 @@
               <source>Hintergrund Bild</source>
               <target>Background Image</target>
             </trans-unit>
-            <trans-unit id="properties.backgroundImageLeft"">
+            <trans-unit id="properties.backgroundImageLeft">
               <source>Bild Links</source>
               <target>Image Left</target>
             </trans-unit>
