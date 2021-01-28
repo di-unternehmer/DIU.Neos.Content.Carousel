@@ -16,7 +16,7 @@ Image Source: https://www.pexels.com/de-de/foto/arbeit-arbeitsplatz-buro-busines
 To restrict the content elements which should be slideable you should overwrite the constraints in you site package like this example.
 
 ```
-'DIU.Neos.Content.Carousel:Slide':
+'DIU.Neos.Content.Carousel:Carousel':
   constraints:
     nodeTypes:
       'Neos.Neos:Content': false
