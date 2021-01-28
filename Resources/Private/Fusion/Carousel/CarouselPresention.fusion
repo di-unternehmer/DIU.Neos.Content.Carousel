@@ -1,4 +1,4 @@
-prototype(DIU.Neos.Content.Carousel:Wrapper.Presentation) < prototype(Neos.Fusion:Component) {
+prototype(DIU.Neos.Content.Carousel:Carousel.Presentation) < prototype(Neos.Fusion:Component) {
 
     slides = null
     navigation = null

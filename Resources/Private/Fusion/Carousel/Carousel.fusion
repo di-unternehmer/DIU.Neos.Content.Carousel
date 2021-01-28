@@ -1,0 +1,5 @@
+prototype(DIU.Neos.Content.Carousel:Carousel) < prototype(Neos.Neos:ContentComponent) {
+    renderer = DIU.Neos.Content.Carousel:Carousel.Presentation {
+        slides = ${q(node).children()}
+    }
+}

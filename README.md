@@ -60,8 +60,8 @@ If you would like to use a different initialization you could overwrite the scri
 For example, you just want to have the dotted navigation:
 
 ```
-prototype(DIU.Neos.Content.Carousel:Wrapper) {
-    renderer = DIU.Neos.Content.Carousel:Wrapper.Presentation {
+prototype(DIU.Neos.Content.Carousel:Carousel) {
+    renderer = DIU.Neos.Content.Carousel:Carousel.Presentation {
         navigation = Neos.Fusion:Tag {
             tagName = 'div'
             attributes.class = 'swiper-pagination'

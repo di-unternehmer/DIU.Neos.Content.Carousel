@@ -1,4 +1,4 @@
-'DIU.Neos.Content.Carousel:Wrapper':
+'DIU.Neos.Content.Carousel:Carousel':
   superTypes:
     'Neos.Neos:Content': true
     'DIU.Neos.Content.Carousel:Slide': true
