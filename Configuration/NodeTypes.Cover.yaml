@@ -5,7 +5,6 @@
     label: i18n
     group: 'general'
     icon: icon-image
-    reloadIfChanged: true
     inlineEditable: true
     inspector:
       groups:

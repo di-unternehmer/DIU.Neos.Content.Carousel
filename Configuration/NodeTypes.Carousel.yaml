@@ -6,5 +6,4 @@
     group: 'general'
     icon: icon-slideshare
     position: 420
-    reloadIfChanged: true
     inlineEditable: true
